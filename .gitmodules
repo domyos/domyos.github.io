@@ -1,0 +1,3 @@
+[submodule "brutalist"]
+	path = brutalist
+	url = git@github.com:domyos/brutalist.git
