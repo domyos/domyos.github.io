@@ -57,6 +57,43 @@
             <article>
                 <footer>
                         <p>
+                        <time datetime="2022-04-23 00:00:00+02:00">
+                            <script>document.write(moment('2022-04-23 00:00:00+02:00').format('DD.MM.YYYY'));</script>
+                        </time>
+                                in <a href="https://domyos.github.io/category/ctf-writeups.html"><span class="category-tag">CTF writeups</span></a>
+                    </p>
+                </footer>
+                <header>
+                    <a href="https://domyos.github.io/serial-killer.html">
+                        <h2>Serial Killer</h2>
+                    </a>
+                </header>
+                <div class="summary"><p><img alt="challenge description" src="https://domyos.github.io/images/serialkiller/challenge.png"></p>
+<p>When opening the site at <a href="http://serial.tamuctf.com/">http://serial.tamuctf.com/</a> we only see the static text that talks about a new method of getting files.</p>
+<p><img alt="testpage" src="https://domyos.github.io/images/serialkiller/testpage.png"></p>
+<p>Additionally there exists a PHP session ID cookie.</p>
+<p><img alt="session ID cookie" src="https://domyos.github.io/images/serialkiller/sessionid.png"></p>
+<p>With the <code>%3D</code> in the end, the cookie seems to be URL encoded.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">decodeURIComponent</span><span class="p">(</span><span class="s1">&#39;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30%3D&#39;</span><span class="p">)</span>
+
+<span class="c1">// &quot;Tzo3OiJHZXRQYWdlIjoxOntzOjQ6ImZpbGUiO3M6MTA6ImluZGV4Lmh0bWwiO30=&quot;</span>
+</code></pre></div>
+
+<p>This …</p> </div>
+                <div class="tags">
+                    <ul class="tags">
+                        <li><a href="https://domyos.github.io/tag/web.html" class="tag">web</a></li>
+                    </ul>
+                </div>
+                <a href="https://domyos.github.io/serial-killer.html">
+                    <p class="readmore">Weiterlesen...</p>
+                </a>
+            </article>
+        </li>
+        <li>
+            <article>
+                <footer>
+                        <p>
                         <time datetime="2022-03-14 00:00:00+01:00">
                             <script>document.write(moment('2022-03-14 00:00:00+01:00').format('DD.MM.YYYY'));</script>
                         </time>
