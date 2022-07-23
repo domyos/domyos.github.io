@@ -1,4 +1,5 @@
 Title: Imported Kimchi
+Description: Simple python web challenge on unpickling untrusted user input. 
 Date: 2022-03-14
 Category: CTF writeups
 Tags: web

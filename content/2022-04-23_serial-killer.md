@@ -1,4 +1,5 @@
 Title: Serial Killer
+Description: A simple PHP web challenge at TAMUctf 2022.
 Date: 2022-04-23
 Category: CTF writeups
 Tags: web
@@ -62,4 +63,4 @@ And using this new cookie we can read `/etc/passwd`:
 
 ![flag in passwd]({static}/images/serialkiller/flag.png)
 
-So the flag is **gigem{1nt3r3sting_LFI_vuln}**
+So the flag is **`gigem{1nt3r3sting_LFI_vuln}`**
