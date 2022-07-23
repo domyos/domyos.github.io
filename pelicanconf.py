@@ -18,7 +18,7 @@ DEFAULT_PAGINATION = 10
 
 
 # Theme Settings
-THEME = 'brutalist'
+THEME = 'theme'
 
 ## used for OG tags and Twitter Card data on index page
 # SITEIMAGE = 'site-cover.jpg'
